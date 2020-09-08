@@ -13,10 +13,23 @@ T Max(T x, T y) {
 
 //Explicit Instantiation
 template char Max(char x, char y);
-template char * Sum(char * a , char * b);
+
+//Explicit Specialization
+//template<> const char * Max(const char * x, const char * y){
+//    return strcmp(x, y) > 0 ? x : y;
+//}
 
 int main() {
-    Sum(2, 3);
+    Max("a", "b");
+    const char * b {"B"};
+    const char * a {"A"};
+    auto maxChar = Max(a , b);
+    std::cout << "Bigger char * is " << maxChar << std::endl;
+    std::cout << "Hello, World!" << std::endl;
+    char aChar = 'a';
+    char bChar = 'b';
+    auto maxChar1 = Max(aChar , bChar);
+    std::cout << "Bigger char is " << maxChar1 << std::endl;
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }
