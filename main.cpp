@@ -26,6 +26,18 @@ void Print(){
     std::cout << size << std::endl;
 }
 
+template<typename T, int size>
+T Max(T (&ref)[size]) {
+    T max{};
+    for(int i = 0; i < size; i ++) {
+        if(max < ref[i])
+            max = ref[i];
+    }
+
+    std::cout << "The max value is " << max << std::endl;
+    return max;
+}
+
 //template <typename T>
 //T Sum(T * pArr, int size) {
 //    T sum{};
@@ -64,5 +76,7 @@ int main() {
     //reference of Array
     //int (&ref)[4] = arr;
     Sum(arr);
+
+    Max(arr);
     return 0;
 }
