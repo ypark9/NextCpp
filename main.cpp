@@ -58,6 +58,25 @@ T Sum(T (&pArr)[size]) {
     return sum;
 }
 
+//This will be the base case of the recursion caused by Print(args...)
+void Print() {
+}
+
+//Template parameter pack
+template<typename T, typename ... Params>
+//Function parameter pack
+void Print(T a, Params ...args) {
+    Print(args...);
+}
+
+/*
+ * 1. Print(1, 2.5, 3, "4");
+ * 2. Print(2.5, 3, "4");
+ * 3. Print(3, "4");
+ * 4. Print("4");
+ * 5. Print();
+ * */
+
 int main() {
 //    Max("a", "b");
 //    const char * b {"B"};
@@ -71,12 +90,16 @@ int main() {
 //    std::cout << "Bigger char is " << maxChar1 << std::endl;
 //    std::cout << "Hello, World!" << std::endl;
 
-    Print<3>();
-    int arr[] {1,2,3,4};
-    //reference of Array
-    //int (&ref)[4] = arr;
-    Sum(arr);
+//    Print<3>();
+//    int arr[] {1,2,3,4};
+//    //reference of Array
+//    //int (&ref)[4] = arr;
+//    Sum(arr);
+//
+//    Max(arr);
 
-    Max(arr);
+Print(1, 2.5, 3, "4", "string");
+
+
     return 0;
 }
