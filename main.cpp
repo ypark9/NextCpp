@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <vector>
 template <typename T>
 T Sum(T a, T b) {
     return a + b;
@@ -77,6 +77,28 @@ void Print(T a, Params ...args) {
  * 5. Print();
  * */
 
+//Functional programming
+//Implements keep_if on your own
+//So it can be used like this.
+// const auto ys = keep_if(is_oven, xs);
+
+bool is_even(int x) {
+    return x % 2 == 0;
+}
+
+template<typename Function, typename T>
+T keep_if(Function, T vec){
+    T ret;
+    for(auto x : vec){
+        if (Function(x)) {
+            ret.push_back(x);
+        }
+    }
+
+    return ret;
+}
+
+
 int main() {
 //    Max("a", "b");
 //    const char * b {"B"};
@@ -98,8 +120,9 @@ int main() {
 //
 //    Max(arr);
 
-Print(1, 2.5, 3, "4", "string");
-
+//Print(1, 2.5, 3, "4", "string");
+    std::vector<int> xs{1,2,3,4};
+    const auto ys = keep_if(is_even, xs);
 
     return 0;
 }
