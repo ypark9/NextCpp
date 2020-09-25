@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/YOPA/CLionProjects/NextCPP/bfs.cpp">
+			<Option target="NextCPP"/>
+		</Unit>
 		<Unit filename="C:/Users/YOPA/CLionProjects/NextCPP/main.cpp">
 			<Option target="NextCPP"/>
 		</Unit>

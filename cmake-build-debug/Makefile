@@ -127,6 +127,33 @@ NextCPP\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\NextCPP.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\NextCPP.dir\build
 .PHONY : NextCPP\fast
 
+bfs.obj: bfs.cpp.obj
+
+.PHONY : bfs.obj
+
+# target to build an object file
+bfs.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NextCPP.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\NextCPP.dir\bfs.cpp.obj
+.PHONY : bfs.cpp.obj
+
+bfs.i: bfs.cpp.i
+
+.PHONY : bfs.i
+
+# target to preprocess a source file
+bfs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NextCPP.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\NextCPP.dir\bfs.cpp.i
+.PHONY : bfs.cpp.i
+
+bfs.s: bfs.cpp.s
+
+.PHONY : bfs.s
+
+# target to generate assembly for a file
+bfs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\NextCPP.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\NextCPP.dir\bfs.cpp.s
+.PHONY : bfs.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -163,6 +190,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... NextCPP
+	@echo ... bfs.obj
+	@echo ... bfs.i
+	@echo ... bfs.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
