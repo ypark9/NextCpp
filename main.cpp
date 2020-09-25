@@ -122,7 +122,7 @@ int main() {
 
 //Print(1, 2.5, 3, "4", "string");
     std::vector<int> xs{1,2,3,4};
-    const auto ys = keep_if(is_even, xs);
+    //const auto ys = keep_if(is_even, xs);
 
     return 0;
 }
