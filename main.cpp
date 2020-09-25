@@ -124,14 +124,20 @@ int main() {
 //Print(1, 2.5, 3, "4", "string");
     std::vector<int> xs{1,2,3,4};
     //const auto ys = keep_if(is_even, xs);
+
+    // this makes a vector contains 5 items as int.
+    std::vector<int> dj(5);
+    // this makes a vector contains 5 vector array.
     std::vector<int> adj[5];
-    bfsUtil::addEdge(adj, 0, 1);
-    bfsUtil::addEdge(adj, 0, 4);
-    bfsUtil::addEdge(adj, 1, 2);
-    bfsUtil::addEdge(adj, 1, 3);
-    bfsUtil::addEdge(adj, 1, 4);
-    bfsUtil::addEdge(adj, 2, 3);
-    bfsUtil::addEdge(adj, 3, 4);
-    bfsUtil::printGraph(adj, 5);
+    int num[3];
+    int numm(3);
+    Graph::addEdge(adj, 0, 1);
+    Graph::addEdge(adj, 0, 4);
+    Graph::addEdge(adj, 1, 2);
+    Graph::addEdge(adj, 1, 3);
+    Graph::addEdge(adj, 1, 4);
+    Graph::addEdge(adj, 2, 3);
+    Graph::addEdge(adj, 3, 4);
+    Graph::printGraph(adj, 5);
     return 0;
 }
