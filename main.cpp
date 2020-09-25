@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "bfs.h"
 template <typename T>
 T Sum(T a, T b) {
     return a + b;
@@ -123,6 +124,14 @@ int main() {
 //Print(1, 2.5, 3, "4", "string");
     std::vector<int> xs{1,2,3,4};
     //const auto ys = keep_if(is_even, xs);
-
+    std::vector<int> adj[5];
+    bfsUtil::addEdge(adj, 0, 1);
+    bfsUtil::addEdge(adj, 0, 4);
+    bfsUtil::addEdge(adj, 1, 2);
+    bfsUtil::addEdge(adj, 1, 3);
+    bfsUtil::addEdge(adj, 1, 4);
+    bfsUtil::addEdge(adj, 2, 3);
+    bfsUtil::addEdge(adj, 3, 4);
+    bfsUtil::printGraph(adj, 5);
     return 0;
 }
