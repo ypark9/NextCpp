@@ -6,15 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/YOPA/CLionProjects/NextCPP/bfs.h
-vector
--
-
-C:/Users/YOPA/CLionProjects/NextCPP/main.cpp
+C:/Users/YOPA/CLionProjects/NextCPP/bfs.cpp
 iostream
 -
 vector
 -
 bfs.h
 C:/Users/YOPA/CLionProjects/NextCPP/bfs.h
+
+C:/Users/YOPA/CLionProjects/NextCPP/bfs.h
+vector
+-
+queue
+-
 

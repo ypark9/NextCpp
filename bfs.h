@@ -16,6 +16,7 @@ public:
     void addEdge(int u, int v);
     void printGraph(int V);
     void bfs();
+    void dfs();
 
 //functions
 private:

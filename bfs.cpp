@@ -41,6 +41,10 @@ void Graph::addEdge(int u, int v){
     m_adjVec[v]->push_back(u);
 }
 
+void Graph::dfs() {
+
+}
+
 void Graph::bfs() {
     // keep the record what vertex we checked.
     vector<int> record;
@@ -54,7 +58,8 @@ void Graph::bfs() {
     //find adj items and add them to queue
     for(auto vec : *m_adjVec[root]){
         std::cout << "We put neighbors to queue " << vec <<" " <<std::endl;
-        m_q.push(vec);
+        if(find(record.begin(), record.end(), vec) == record.end())
+            m_q.push(vec);
     }
 
     do {
@@ -65,7 +70,7 @@ void Graph::bfs() {
         record.push_back(root);
         for(auto vec : *m_adjVec[root]){
             std::cout << "We put neighbors to queue " << vec <<" " <<std::endl;
-            if(find(record.begin(), record.end(), vec) != record.end())
+            if(find(record.begin(), record.end(), vec) == record.end())
                 m_q.push(vec);
         }
     }while (m_q.size() != 0);
