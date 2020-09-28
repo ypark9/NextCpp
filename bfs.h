@@ -6,12 +6,24 @@
 #define NEXTCPP_BFS_H
 
 #include <vector>
+#include <queue>
+
 using namespace std;
 
-class bfsUtil {
+class Graph {
 public:
-    static void addEdge(std::vector<int> * adj, int u, int v);
-    static void printGraph(std::vector<int> adj[], int V);
+    Graph(int size);
+    void addEdge(int u, int v);
+    void printGraph(int V);
+    void bfs();
+
+//functions
+private:
+
+// variables
+    vector<vector<int> * > m_adjVec;
+    int m_vecSize;
+    queue<int> m_q;
 };
 
 #endif //NEXTCPP_BFS_H

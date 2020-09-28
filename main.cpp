@@ -130,13 +130,14 @@ int main() {
     // this makes a vector contains 5 vector array.
     std::vector<int> adj[5];
     Graph * graph = new Graph(5);
-    graph->addEdge(adj, 0, 1);
-    graph->addEdge(adj, 0, 4);
-    graph->addEdge(adj, 1, 2);
-    graph->addEdge(adj, 1, 3);
-    graph->addEdge(adj, 1, 4);
-    graph->addEdge(adj, 2, 3);
-    graph->addEdge(adj, 3, 4);
-    graph->printGraph(adj, 5);
+    graph->addEdge(0, 1);
+    graph->addEdge(0, 4);
+    graph->addEdge(1, 2);
+    graph->addEdge(1, 3);
+    graph->addEdge(1, 4);
+    graph->addEdge(2, 3);
+    graph->addEdge(3, 4);
+    graph->printGraph(5);
+    graph->bfs();
     return 0;
 }
